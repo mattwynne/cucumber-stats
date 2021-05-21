@@ -19,7 +19,10 @@ end
 
 puts "repo, pr, url, creator, created at"
 repos = gh.repos(org_name).select { |repo| !repo.archived }
-pulls = repos.map { |repo| gh.pulls(repo[:id], query: { state: 'all' }) }.flatten.sort_by(&:created_at)
+pulls = repos.each_with_index.map { |repo, index| 
+  $stderr.puts "Fetching pulls for repo #{index + 1}/#{repos.length}"
+  gh.pulls(repo[:id], query: { state: 'all' }) 
+}.flatten.sort_by(&:created_at)
 stats = pulls.map do |pr|
   PrStat.new(pr.base.repo.name, pr.number, pr.html_url, pr.user.login, pr.created_at)
 end
