@@ -50,7 +50,7 @@ class Contributions
 end
 
 contributors = {}
-ARGF.each_with_index do |line, index|
+STDIN.read.lines.each_with_index do |line, index|
   next if index < 1
   fields = line.split(",")
   date = fields[4] = Date.parse(fields[4])
@@ -74,6 +74,13 @@ contributors_on = (from..to).map { |day|
     }
   ]
 }.to_h
+
+if ARGV[0] == "--show-current-active"
+  contributors_on[to][:active].sort.map do |login|
+    puts "https://github.com/#{login}"
+  end
+  exit 0
+end
 
 puts "date,new,active,inactive"
 contributors_on.each do |day, statuses|
