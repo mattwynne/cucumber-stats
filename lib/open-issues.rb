@@ -17,7 +17,7 @@ stats = repos.each_with_index.map { |repo, index|
   }
 }.flatten.sort_by(&:days_since_last_activity).reverse
 
-puts "repo, issue, url, days since last activity"
+puts "repo,issue,url,days since last activity"
 stats.each do |stat|
   puts stat.to_csv 
 end
