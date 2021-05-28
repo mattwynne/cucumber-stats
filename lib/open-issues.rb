@@ -15,7 +15,7 @@ stats = repos.each_with_index.map { |repo, index|
     days_since_last_activity = (Date.parse(Time.now.to_s) - Date.parse(issue[:updated_at].to_s)).to_i
     IssueStat.new(repo[:name], issue[:number], issue[:html_url], days_since_last_activity)
   }
-}.flatten.sort_by(&:days_since_last_activity)
+}.flatten.sort_by(&:days_since_last_activity).reverse
 
 puts "repo, issue, url, days since last activity"
 stats.each do |stat|
