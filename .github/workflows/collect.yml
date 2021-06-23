@@ -8,9 +8,14 @@ on:
 jobs:
   collect-reports:
     runs-on: ubuntu-latest
+    env: 
+      - GITHUB_TOKEN: ${{ secrets.GIT_PUSH_TOKEN }}
+
     steps:
       - uses: actions/checkout@v2
-      - run : make
+      - uses: ruby/setup-ruby@v1
+      - run: bundle install
+      - run: make
       - run: git add .
       - name: Get current date
         id: date
