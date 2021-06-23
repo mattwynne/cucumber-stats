@@ -10,7 +10,7 @@ reports/%.${TODAY}.csv: reports/pulls.${TODAY}.csv lib/%.rb
 .PRECIOUS: reports/%.${TODAY}.csv
 
 reports/%.latest.csv: reports/%.${TODAY}.csv
-	ln -sf $(realpath $<) $@
+	cp $(realpath $<) $@
 
 clean:
 	rm -rf reports/*.latest.csv
