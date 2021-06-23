@@ -11,7 +11,7 @@ jobs:
   collect-reports:
     runs-on: ubuntu-latest
     env: 
-      - GITHUB_TOKEN: ${{ secrets.GIT_PUSH_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GIT_PUSH_TOKEN }}
 
     steps:
       - uses: actions/checkout@v2
