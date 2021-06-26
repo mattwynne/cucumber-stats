@@ -9,4 +9,5 @@ ARGF.each_with_index do |line, index|
   fields[4] = Date.parse(fields[4])
   pulls << Pull.new(*fields)
 end
-puts pulls.uniq { |pull| pull.creator }.map { |p| [p.repo, p.pr, p.url, p.creator, p.created_at].join(", ") }.join("\n")
+puts "repo,pr,url,username,date,total"
+puts pulls.uniq { |pull| pull.creator }.each_with_index.map { |p, i| [p.repo, p.pr, p.url, p.creator, p.created_at, i+1].join(", ") }.join("\n")

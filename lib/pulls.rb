@@ -17,5 +17,5 @@ stats = pulls.map { |pr|
   PrStat.new(pr.base.repo.name, pr.number, pr.html_url, pr.user.login, pr.created_at)
 }
 
-puts "repo, pr, url, creator, created at"
+puts "repo,pr,url,creator,created at"
 stats.compact.each { |stat| puts stat.to_csv }
