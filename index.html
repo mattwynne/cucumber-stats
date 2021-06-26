@@ -92,11 +92,17 @@
           .tickPadding(15)
           .tickSize(-innerWidth);
 
+        let total
+
         const row = d => {
           d.timestamp = new Date(d.date);
           d.new = +d.new
           d.active = +d.active;
-          document.getElementById('latest-total').innerText = d.new + d.active
+          previousTotal = total
+          total = d.new + d.active
+          document.getElementById('latest-total').innerText = 
+            `${total} ${(total > previousTotal) ? "↗ 🎉" : "↘️ 🤔"}`
+          document.getElementById('latest-total').title = `previous: ${previousTotal}`
           return d;
         };
 
@@ -132,14 +138,6 @@
               .x(d => xScale(xValue(d)))
               .y(d => yScale(yActive(d)))
             );
-
-          // g.selectAll('circle').data(data)
-          //   .enter().append('circle')
-          //     .attr('cx', d => xScale(xValue(d)))
-          //     .attr('cy', d => yScale(yValue(d)))
-          //     .attr('fill-opacity', 0.1)
-          //     .attr('r', 4)
-          //     .style('fill', d3.color('green'));
 
           xAxisG.call(xAxis);
           yAxisG.call(yAxis);
