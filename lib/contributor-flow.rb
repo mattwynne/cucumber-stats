@@ -75,8 +75,16 @@ contributors_on = (from..to).map { |day|
   ]
 }.to_h
 
+if ARGV[0] == "--show-current-new"
+  (contributors_on[to][:new]).sort.map do |login|
+    pull = pulls_on.values.flatten.find { |p| p.creator == login }
+    puts "https://github.com/#{login} #{pull.url}"
+  end
+  exit 0
+end
+
 if ARGV[0] == "--show-current-active"
-  contributors_on[to][:active].sort.map do |login|
+  (contributors_on[to][:active]).sort.map do |login|
     puts "https://github.com/#{login}"
   end
   exit 0
