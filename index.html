@@ -7,7 +7,7 @@
     <title>Cucumber new and active contributors</title>
     <style>
       body {
-        margin: 0px;
+        font-family: sans-serif;
       }
       .domain {
         display: none;
@@ -18,27 +18,55 @@
       .tick text {
         fill: #8E8883;
         font-size: 2em;
-        font-family: sans-serif;
       }
       .axis-label {
         fill: #635F5D;
         font-size: 3em;
-        font-family: sans-serif;
       }
       h1 {
         font-size: 3em;
-        font-family: sans-serif;
-        padding-left: 50px;
       }
       h2 {
-        padding-left: 50px;
         font-size: 2em;
-        font-family: sans-serif;
+      }
+      ul li {
+        list-style-type: none;
+        padding-top: 10px;
+        font-size: 1.5em;
+      }
+      ul li img {
+        padding-right: 5px;
       }
     </style>
   </head>
   <body>
     <h1>Cucumber</h1>
+    <h2>New contributors this week</h2>
+    <p>Show them some ❤️</p>
+    <ul id="new-contributors">
+    </ul>
+    <script>
+      (() => {
+        ul = document.getElementById('new-contributors')
+        d3.csv('https://raw.githubusercontent.com/mattwynne/cucumber-stats/main/reports/first-pr.latest.csv', data => {
+          for (var i = 0; i < data.length; i++) {
+            if (new Date(data[i].date) >= new Date(Date.now() - 7 * 24 * 60 * 60 * 1000) ) {
+              pr = data[i]
+              img = document.createElement('img')
+              img.src = `https://github.com/${pr.username}.png`
+              img.width = 40
+              a = document.createElement('a')
+              a.href = pr.url
+              a.appendChild(img)
+              a.appendChild(document.createTextNode(pr.username))
+              li = document.createElement('li')
+              li.appendChild(a)
+              ul.appendChild(li)
+            }
+          }
+        })
+      })()
+    </script>
     <h2>New & active contributors in past 90 days: <span id="latest-total"></span></h2>
     <svg id="flow" width="960" height="500"></svg>
     <script>
