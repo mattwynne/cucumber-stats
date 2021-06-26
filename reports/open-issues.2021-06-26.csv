@@ -297,7 +297,6 @@ cucumber-react,4,https://github.com/cucumber/cucumber-react/pull/4,67
 common,1462,https://github.com/cucumber/common/issues/1462,67
 cucumber-js,1640,https://github.com/cucumber/cucumber-js/issues/1640,65
 common,1493,https://github.com/cucumber/common/issues/1493,65
-cucumber-js,1648,https://github.com/cucumber/cucumber-js/issues/1648,64
 godog,388,https://github.com/cucumber/godog/issues/388,63
 cucumber-cpp,242,https://github.com/cucumber/cucumber-cpp/issues/242,62
 docs,560,https://github.com/cucumber/docs/issues/560,61
@@ -403,7 +402,6 @@ cucumber-android,33,https://github.com/cucumber/cucumber-android/pull/33,36
 cucumber-android,57,https://github.com/cucumber/cucumber-android/pull/57,36
 cucumber-android,61,https://github.com/cucumber/cucumber-android/pull/61,36
 cucumber-android,75,https://github.com/cucumber/cucumber-android/pull/75,36
-cucumber-parent,23,https://github.com/cucumber/cucumber-parent/pull/23,35
 cucumber-jvm,2307,https://github.com/cucumber/cucumber-jvm/issues/2307,32
 common,1216,https://github.com/cucumber/common/issues/1216,32
 cucumber-ruby,1545,https://github.com/cucumber/cucumber-ruby/issues/1545,31
@@ -529,7 +527,6 @@ microdata,45,https://github.com/cucumber/microdata/pull/45,2
 microdata,47,https://github.com/cucumber/microdata/pull/47,2
 microdata,48,https://github.com/cucumber/microdata/pull/48,2
 godog,392,https://github.com/cucumber/godog/pull/392,2
-cucumber-js,1704,https://github.com/cucumber/cucumber-js/pull/1704,2
 common,1617,https://github.com/cucumber/common/pull/1617,2
 common,1618,https://github.com/cucumber/common/pull/1618,2
 common,1630,https://github.com/cucumber/common/pull/1630,2
@@ -543,14 +540,10 @@ cucumber-ruby,1551,https://github.com/cucumber/cucumber-ruby/issues/1551,1
 cucumber-rails,514,https://github.com/cucumber/cucumber-rails/issues/514,1
 cucumber-jvm,2316,https://github.com/cucumber/cucumber-jvm/issues/2316,1
 cucumber-jvm,2320,https://github.com/cucumber/cucumber-jvm/issues/2320,1
-cucumber-js,1489,https://github.com/cucumber/cucumber-js/issues/1489,1
 cucumber-js,1681,https://github.com/cucumber/cucumber-js/pull/1681,1
 cucumber-js,1685,https://github.com/cucumber/cucumber-js/pull/1685,1
 cucumber-js,1687,https://github.com/cucumber/cucumber-js/pull/1687,1
-cucumber-js,1702,https://github.com/cucumber/cucumber-js/issues/1702,1
 cucumber-js,1706,https://github.com/cucumber/cucumber-js/issues/1706,1
-cucumber-js,1708,https://github.com/cucumber/cucumber-js/pull/1708,1
-cucumber-java-skeleton,63,https://github.com/cucumber/cucumber-java-skeleton/pull/63,1
 common,249,https://github.com/cucumber/common/issues/249,1
 common,1498,https://github.com/cucumber/common/pull/1498,1
 common,1581,https://github.com/cucumber/common/pull/1581,1
@@ -559,6 +552,13 @@ common,1605,https://github.com/cucumber/common/pull/1605,1
 common,1624,https://github.com/cucumber/common/pull/1624,1
 common,1628,https://github.com/cucumber/common/pull/1628,1
 common,1629,https://github.com/cucumber/common/pull/1629,1
-common,1631,https://github.com/cucumber/common/pull/1631,1
 common,1634,https://github.com/cucumber/common/pull/1634,1
+cucumber-parent,23,https://github.com/cucumber/cucumber-parent/pull/23,0
+cucumber-js,1489,https://github.com/cucumber/cucumber-js/issues/1489,0
+cucumber-js,1648,https://github.com/cucumber/cucumber-js/issues/1648,0
+cucumber-js,1702,https://github.com/cucumber/cucumber-js/issues/1702,0
+cucumber-js,1704,https://github.com/cucumber/cucumber-js/pull/1704,0
 cucumber-js,1707,https://github.com/cucumber/cucumber-js/issues/1707,0
+cucumber-js,1708,https://github.com/cucumber/cucumber-js/pull/1708,0
+cucumber-java-skeleton,63,https://github.com/cucumber/cucumber-java-skeleton/pull/63,0
+common,1631,https://github.com/cucumber/common/pull/1631,0
