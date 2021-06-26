@@ -120,7 +120,8 @@
           .tickPadding(15)
           .tickSize(-innerWidth);
 
-        previousDate = new Date(Date.now() - 90 * 24 * 60 * 60 * 1000)
+        windowDays = 30
+        previousDate = new Date(Date.now() - windowDays * 24 * 60 * 60 * 1000)
         today = new Date(Date.now())
         
         let previousTotal
@@ -137,7 +138,7 @@
           if (datesEqual(d.timestamp, today)) {
             document.getElementById('latest-total').innerText = 
               `${total} ${(total > previousTotal) ? "↗ 🎉" : "↘️ 🤔"}`
-            document.getElementById('latest-total').title = `Value on ${previousDate.toDateString()} was ${previousTotal}`
+            document.getElementById('latest-total').title = `${windowDays} days ago on ${previousDate.toDateString()} there were ${previousTotal} new or active contributors`
           }
           return d;
 
