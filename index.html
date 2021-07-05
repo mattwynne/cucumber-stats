@@ -41,7 +41,7 @@
   </head>
   <body>
     <h1>Cucumber</h1>
-    <h2>New contributors this week</h2>
+    <h2>New contributors this month</h2>
     <p>Show them some ❤️</p>
     <ul id="new-contributors">
     </ul>
@@ -50,7 +50,7 @@
         ul = document.getElementById('new-contributors')
         d3.csv('https://raw.githubusercontent.com/mattwynne/cucumber-stats/main/reports/first-pr.latest.csv', data => {
           for (var i = 0; i < data.length; i++) {
-            if (new Date(data[i].date) >= new Date(Date.now() - 7 * 24 * 60 * 60 * 1000) ) {
+            if (new Date(data[i].date) >= new Date(Date.now() - 30 * 24 * 60 * 60 * 1000) ) {
               pr = data[i]
               img = document.createElement('img')
               img.src = `https://github.com/${pr.username}.png`
